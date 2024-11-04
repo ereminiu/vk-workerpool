@@ -26,7 +26,7 @@ func (worker *Worker) Process() {
 	for {
 		select {
 		case <-worker.stop:
-			log.Printf("worker %d done", worker.ID)
+			log.Printf("worker %d is stoped", worker.ID)
 			return
 		case j, ok := <-worker.jobs:
 			if !ok {
